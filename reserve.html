@@ -69,16 +69,15 @@
   </div>
 
   <script>
-     <script type="text/javascript">
     // Question: What does this code do?
     $("#add-btn").on("click", function(event) {
       event.preventDefault();
 
       var makeReservation = {
         name: $("#name").val().trim(),
-        phone-number: $("#phone-number").val().trim(),
+        phoneNumber: $("#phone-number").val().trim(),
         email: $("#email").val().trim(),
-        unique-id: $("#unique-id").val().trim()
+        uniqueId: $("#unique-id").val().trim()
       };
 
       console.log(makeReservation);
@@ -88,10 +87,10 @@
       .then(function(data) {
         console.log(data);
         alert("Making Reservations...");
+        // $.post("/api/", makeReservation)
       });
 
     });
-  </script>
   </script>
            
 

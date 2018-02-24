@@ -62,23 +62,18 @@ var addUsers = 0;
   
     function pushToList(res){
         addUsers ++;
-        console.log(addUsers);
-        
-        if(addUsers > 5){
-            console.log("I am full buddy");
+
+        if(addUsers <= 5){
+           users.push(res);
+            // console.log("I am full buddy     " + res);
+        } else {
+          waitList.push(res);
         }
-        
-        // for(i=0; i<users.length;i++){
-        //     if(users.length < 5){
-        //           users.push(res);
-        //           console.log(users);
-        //           console.log(users.length);
-        //      } else {
-        //         waitList.push(res);
-        //          console.log("I'm waitlist " + waitList);   
-        //     }
-        // }
+
+        console.log(users);
+        console.log(waitList);
     }
+
 
       app.listen(port, function() {
         console.log("App listening on PORT " + port);
