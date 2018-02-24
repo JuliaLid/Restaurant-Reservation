@@ -34,9 +34,10 @@ var addUsers = 0;
       });
     
     // Get all characters
-    // app.get("/all", function(req, res) {
-    //   res.json(characters);
-    // });
+    app.get("/api", function(req, res) {
+      res.json(users);
+    });
+    
     app.post("/api/new", function(req, res) {
         // req.body hosts is equal to the JSON post sent from the user
         // This works because of our body-parser middleware
@@ -63,6 +64,7 @@ var addUsers = 0;
     function pushToList(res){
         addUsers ++;
 
+
         if(addUsers <= 5){
            users.push(res);
             // console.log("I am full buddy     " + res);
@@ -71,7 +73,7 @@ var addUsers = 0;
         }
 
         console.log(users);
-        console.log(waitList);
+
     }
 
 
