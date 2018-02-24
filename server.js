@@ -64,7 +64,6 @@ var addUsers = 0;
     function pushToList(res){
         addUsers ++;
 
-        console.log(res);
 
         if(addUsers <= 5){
            users.push(res);
@@ -74,7 +73,7 @@ var addUsers = 0;
         }
 
         console.log(users);
-        // console.log(waitList);
+
     }
 
 
